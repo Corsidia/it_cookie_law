@@ -1,13 +1,15 @@
-/* IT_COOKIE_LAW.js
+/* IT_COOKIE_LAW.js v.1.0.0b
 * Plugin che permette di adempiere alla normativa europea sui Cookie così come
 * receptia dallo Stato Italiano.
 * Autori: Duccio Armenise e Marta Petrella, http://NemboWeb.com
-* Maggiori info: TODO
+* Maggiori info:
+** https://github.com/NemboWeb/it_cookie_law (repository online)
+** http://nemboweb.com/blog/didattica/cookie-law-vademecum (cookie law vademecum)
 * Il codice è molto semplice, breve e ben commentato,
 * ti raccomandiamo vivamente di leggerlo e comprenderne il funzionamento.
+* LE PRIME VARIABILI SONO DA IMPOSTARE SECONDO LE TUE ESIGENZE!
 */
 
-// Le prime variabili sono da impostare secondo le tue esigenze.
 var cookiePolicyURL = "http://example.com/cookie-policy" // QUESTO DEVE ESSERE IMPOSTATO CORRETTAMENTE e puntare alla tua Cookie policy!
 var acceptedCookieName = 'cookie_policy_accepted' // puoi cambiarlo col nome che vuoi, sarà il nome del cookie impostato
 var infoBannerId = "cookie_info_breve" // Deve essere univoco all'interno della pagina
