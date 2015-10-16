@@ -32,3 +32,12 @@ function setCookie(name, value, days){
 function delCookie(name){
   setCookie(name,'',-1);
 }
+
+$(document).ready(function() {
+  if (getCookie('nemboweb_cookies_accepted') === 'true') {
+    $("[type='text/plain']").each(function(){
+      $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
+      $.globalEval($(this).html()); //esegui lo script
+    });
+  }
+});
