@@ -5,7 +5,7 @@
     <title>Test page for cookie law</title>
     <!-- jQuery v.1 supports IE6 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="ita_cookie_law.js"></script>
+    <script type="text/javascript" src="it_cookie_law.js"></script>
     <script data-blocked="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
@@ -47,7 +47,20 @@
     <h2>Youtube Embed</h2>
     <iframe width="853" height="480" data-blocked="https://www.youtube.com/embed/6pU0dcCh5-8" frameborder="0" allowfullscreen></iframe>
     
-    <!-- TODO Disqus -->
+    <h2>DISQUS</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/blocked">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'itacookielawtest';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </body>
 </html>
 

@@ -37,15 +37,16 @@ function optInHandler(){
 }
 function readUserInput(){
   // Accettazione mediante scroll
-  var scrolled = false;
+  var accepted = false;
   window.onscroll = function(e){
-    if (scrolled == false){
-      scrolled = true;
+    if (accepted == false){
+      accepted = true;
       cookieOptIn();
     }
   }
   // Accettazione con click su acceptButton
   $('#'+acceptButtonId).click(function() {
+    accepted = true;
     cookieOptIn();
   });
 } 
@@ -62,22 +63,21 @@ function reloadJs(src) {
 }
 
 function optedIn(){
-// sblocca scripts with data-src
-$("script[data-blocked]").each(function(){
-  reloadJs($(this).attr('data-blocked'));
-});
-
-// sblocca script with type=text/blocked
-$("body script[type='text/blocked']").each(function(){
-  $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
-  $.globalEval($(this).html()); //esegui lo script
-});
-
-// sblocca iframes con data-blocked
-$("iframe[data-blocked]").each(function(){
-  $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //cambia il type dello script per renderlo eseguibile
-});
+  // sblocca scripts with data-src
+  $("script[data-blocked]").each(function(){
+    reloadJs($(this).attr('data-blocked'));
+  });
+  // sblocca script with type=text/blocked
+  $("body script[type='text/blocked']").each(function(){
+    $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
+    $.globalEval($(this).html()); //esegui lo script
+  });
+  // sblocca iframes con data-blocked
+  $("iframe[data-blocked]").each(function(){
+    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //cambia il type dello script per renderlo eseguibile
+  });
 }
+
 
 // Cookie get, set and delete functions
 function getCookies(){
