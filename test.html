@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Test page for cookie law</title>
+    <!-- jQuery v.1 supports IE6 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
     <h1>Elementi incorporati di terze parti che fanno uso di cookie</h1>
@@ -23,6 +25,11 @@
         </blockquote>
       </div>
     </div>
+    <script type="text/javascript">
+      $("[type='text/plain']").each(function(){
+        $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
+      });
+    </script>
   </body>
 </html>
 
