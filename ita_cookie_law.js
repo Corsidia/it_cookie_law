@@ -56,23 +56,27 @@ function cookieOptIn(){
 }
 
 function reloadJs(src) {
-  src = $('script[src$="' + src + '"]').attr("src");
-  $('script[src$="' + src + '"]').remove();
+  src = $('script[data-blocked="' + src + '"]').attr("data-blocked");
+  $('script[data-blocked="' + src + '"]').remove();
   $('<script/>').attr('src', src).appendTo('body');
 }
 
 function optedIn(){
-// head scripts with type=text/plain
-$("head script[type='text/plain']").each(function(){
-  reloadJs($(this).attr('src'));
+// head scripts with data-src
+$("script[data-blocked]").each(function(){
+  reloadJs($(this).attr('data-blocked'));
 });
 
 // body script with type=text/plain
-$("body script[type='text/plain']").each(function(){
+$("body script[type='text/blocked']").each(function(){
   $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
   $.globalEval($(this).html()); //esegui lo script
 });
 
+//iframes with data-src
+$("iframe[data-blocked]").each(function(){
+  $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //cambia il type dello script per renderlo eseguibile
+});
 }
 
 // Cookie get, set and delete functions

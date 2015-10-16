@@ -5,15 +5,15 @@
     <title>Test page for cookie law</title>
     <!-- jQuery v.1 supports IE6 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/ita_cookie_law.js"></script>
-    <script type="text/plain" src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="ita_cookie_law.js"></script>
+    <script data-blocked="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <h1>Elementi incorporati di terze parti che fanno uso di cookie</h1>
     <h2>Facebook page plugin</h2>
     <!-- fare prima login su Facebook (se non si è effettuato il login i cookie non vengono settati)-->
     <div id="fb-root"></div>
-    <script type="text/plain">(function(d, s, id) {
+    <script type="text/blocked">(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -32,6 +32,9 @@
     <!-- Facebook Javascript SDK già caricata qui sopra -->
     <div class="fb-like" data-href="https://ita-cookie-law-nemboweb.c9.io/test.html#" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     
+    <h2>Google Map iframe</h2>
+    <iframe data-blocked="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22343.154597946985!2d9.300697549999999!3d45.57256365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1444996431033" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
     <h2>Google +1 Button</h2>
     <g:plusone></g:plusone>
     
@@ -40,6 +43,8 @@
     
     <h2>Google Hangout button</h2>
     <div class="g-hangout" data-render="createhangout"></div>
+    
+    <!-- TODO Disqus -->
   </body>
 </html>
 
