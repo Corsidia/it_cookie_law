@@ -62,18 +62,18 @@ function reloadJs(src) {
 }
 
 function optedIn(){
-// head scripts with data-src
+// sblocca scripts with data-src
 $("script[data-blocked]").each(function(){
   reloadJs($(this).attr('data-blocked'));
 });
 
-// body script with type=text/plain
+// sblocca script with type=text/blocked
 $("body script[type='text/blocked']").each(function(){
   $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
   $.globalEval($(this).html()); //esegui lo script
 });
 
-//iframes with data-src
+// sblocca iframes con data-blocked
 $("iframe[data-blocked]").each(function(){
   $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //cambia il type dello script per renderlo eseguibile
 });
