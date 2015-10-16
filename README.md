@@ -2,10 +2,10 @@
 
 Questo plugin **composto da [un solo file javascript](it_cookie_law.js)**, breve e ben commentato, consente di realizzare facilmente:
 
-* Il blocco preventivo di tutti gli elementi interni ed esterni che fanno uso di cookie;
-* La presentazione del banner (l'informativa breve) ai soli utenti che non hanno ancora accettato la cookie policy;
-* La registrazione del consenso dell'utente espresso con la *continuazione della navigazione mediante scroll della pagina* o click sul pulsante di accettazione del banner;
-* Lo sblocco di tutti gli elementi preventivamente bloccati per i soli utenti che hanno espresso il consenso con le modalità descritte nel banner.
+* Il **blocco preventivo** di tutti gli elementi interni ed esterni che fanno uso di cookie;
+* La **presentazione del banner** (l'informativa breve) ai soli utenti che non hanno ancora accettato la cookie policy;
+* La **registrazione del consenso** dell'utente espresso con la *continuazione della navigazione mediante scroll della pagina* o click sul pulsante di accettazione del banner;
+* Lo **sblocco di tutti gli elementi** preventivamente bloccati per i soli utenti che hanno espresso il consenso con le modalità descritte nel banner.
 
 Come richiesto dalla normativa sui cookie italiana, anche nota come "cookie law".
 
@@ -36,6 +36,9 @@ Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
 Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`,
 
 Diversi esempi sono disponibili nel file [esempi.html](esempi.html).
+
+### Cookie policy
+La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine. Infine **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js]](it_cookie_law.js).
 
 *Buon lavoro!*
 
