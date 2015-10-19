@@ -31,16 +31,59 @@ Ora puoi procedere al blocco preventivo di tutti gli elementi che fanno uso di c
 
 Il modo più sicuro per applicare il blocco preventivo consiste nel modificare l'HTML degli elementi esterni (script e iframe) in modo che non siano eseguibili a meno che non vengano sbloccati dallo script contenuto nel file [it_cookie_law.js](it_cookie_law.js). In questo modo se anche si dovesse verificare un errore a livello javascript la cosa peggiore che potrebbe accadere è che gli elementi esterni non vengano sbloccati, il che consentirebbe comunque di evitare le sanzioni previste dalla legge.
 
-#### Script in embed
-Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
+#### Come bloccare gli script in embed
+Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`. Se non fosse presente l'attributo `type=text/javascript` nello script che vuoi bloccare è perché si tratta del valore di default e quindi talvolta viene omesso. Per bloccare lo script inserici comunque l'attributo `type=text/blocked`. Seguono due esempi.
 
-#### Script esterno e iframe
-Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`,
+##### Prima:
+```html
+<script type='text/javascript'>
+  alert('sono eseguito subito');
+</script>
 
-Diversi esempi sono disponibili nel file [esempi.html](esempi.html).
+<script>
+  alert('anche io sono eseguito subito');
+</script>
+```
+
+##### Dopo:
+```html
+<script type='text/blocked'>
+  alert('sono bloccato preventivamente');
+</script>
+
+<script type='text/blocked'>
+  alert('anche io sono bloccato preventivamente');
+</script>
+```
+
+#### Come bloccare gli script esterni e gli iframe
+Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`.
+
+E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML sia comunque valido rispetto agli standard del W3C.
+
+##### Prima:
+```html
+<!-- script nella sezione head eseguito al caricamento della pagina -->
+<script src="https://example.com/path/to/script.js"></script>
+<!-- iframe incorporato al caricamento della pagina -->
+<iframe src="https://example.com/path/to/script.js"></iframe>
+```
+
+##### Dopo:
+```html
+<!-- script nella sezione head bloccato preventivamente -->
+<script src="#" data-blocked="https://example.com/path/to/script.js"></script>
+<!-- iframe bloccato preventivamente -->
+<iframe src="#" data-blocked="https://example.com/path/to/script.js"></iframe>
+```
+
+**Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html).
 
 ### Cookie policy
-La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine. Infine **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js](it_cookie_law.js).
+
+**ATTENZIONE:** La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine dello stesso. Inoltre **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js](it_cookie_law.js).
+
+Prossimamente scriveremo un articolo con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)".
 
 *Buon lavoro!*
 
