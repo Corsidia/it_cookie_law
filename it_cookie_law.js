@@ -1,6 +1,7 @@
 /* IT_COOKIE_LAW.js v.1.0.0b
 * Plugin che permette di adempiere alla normativa europea sui Cookie così come
 * receptia dallo Stato Italiano.
+* Per funzionare necessita di jQuery v.1
 * Autori: Duccio Armenise e Marta Petrella, http://NemboWeb.com
 * Maggiori info:
 ** https://github.com/NemboWeb/it_cookie_law (repository online)
@@ -99,7 +100,8 @@ function optedIn(){
 
 // Quelle che seguono sono solo funzioni per rendere più semplice
 // la lettura, scrittura e cancellazione dei cookie.
-// Legge tutti i cooki e li inserisce nell'oggetto chiave/valore 'cookies'
+
+// Legge tutti i cookie e li inserisce nell'oggetto chiave/valore 'cookies'
 function getCookies(){
   var cookies = {};
   var all = document.cookie; // Get all cookies in one big string
