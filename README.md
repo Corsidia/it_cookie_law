@@ -29,6 +29,8 @@ Ora puoi procedere al blocco preventivo di tutti gli elementi che fanno uso di c
 
 ### Blocco preventivo, come applicarlo
 
+Il modo più sicuro per applicare il blocco preventivo consiste nel modificare l'HTML degli elementi esterni (script e iframe) in modo che non siano eseguibili a meno che non vengano sbloccati dallo script contenuto nel file [it_cookie_law.js](it_cookie_law.js). In questo modo se anche si dovesse verificare un errore a livello javascript la cosa peggiore che potrebbe accadere è che gli elementi esterni non vengano sbloccati, il che consentirebbe comunque di evitare le sanzioni previste dalla legge.
+
 #### Script in embed
 Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
 
@@ -38,7 +40,7 @@ Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`,
 Diversi esempi sono disponibili nel file [esempi.html](esempi.html).
 
 ### Cookie policy
-La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine. Infine **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js]](it_cookie_law.js).
+La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine. Infine **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js](it_cookie_law.js).
 
 *Buon lavoro!*
 
