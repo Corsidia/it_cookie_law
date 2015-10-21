@@ -11,33 +11,71 @@
 * LE PRIME VARIABILI SONO DA IMPOSTARE SECONDO LE TUE ESIGENZE!
 */
 
-var cookiePolicyURL = "http://example.com/cookie-policy" // QUESTO DEVE ESSERE IMPOSTATO CORRETTAMENTE e puntare alla tua Cookie policy!
-var acceptedCookieName = 'cookie_policy_accepted' // puoi cambiarlo col nome che vuoi, sarà il nome del cookie impostato
-var infoBannerId = "cookie_info_breve" // Deve essere univoco all'interno della pagina
-var acceptButtonId = "cookie_accept_button" // Deve essere univoco all'interno della pagina
+// QUESTO INDIRIZZO DEVE RIMANDARE AD UNA PAGINA ESISTENTE CONTENENTE LA TUA Cookie policy!
+var cookiePolicyURL = "http://example.com/cookie-policy"
 
-var infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando su 'Chiudi', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito, acconsenti all'utilizzo dei cookie. Per maggiori informazioni o per negare il consenso a tutti o ad alcuni cookie, consulta l'informativa."
+// Nome del cookie impostato. Puoi cambiarlo a tuo piecere.
+var acceptedCookieName = 'cookie_policy_accepted'
+
+// Deve essere univoco all'interno della pagina
+var infoBannerId = "cookie_info_breve"
+
+// Deve essere univoco all'interno della pagina
+var acceptButtonId = "cookie_accept_button"
+
+
+// testi dei pulsanti
 var acceptButtonText = "Chiudi"
 var infoLinkText = "Leggi informativa"
-var divEsternoCSS = "position: fixed; width: 100%; background-color: rgba(0, 0, 0, 0.7); margin: 0px; left: 0px; top: 0px; padding: 10px 0px; z-index: 1000;";
-var divInternoCSS = "position: relative; width: 70%; margin: 0px auto;";
-var infoTextCSS = "display: block; width: 70%; line-height: 20px; color: rgb(255, 255, 255); font-family: verdana,arial,tahoma,sans-serif; font-size: 12px;";
-var acceptButtonCSS = "position: absolute; top: 0px; right: 0px; display: block; width: 140px; line-height: 30px; color: rgb(255, 153, 0); text-align: center; font-size: 14px; font-weight: bold; text-decoration: none;";
-var infoLinkCSS = "position: absolute; top: 30px; right: 0px; display: block; width: 140px; line-height: 30px; color: rgb(255, 255, 255); text-align: center; font-size: 12px; text-decoration: underline;";
+
+// Testo dell'informativa
+var infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando su '"+acceptButtonText+"', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito, acconsenti all'utilizzo dei cookie. Per maggiori informazioni o per negare il consenso a tutti o ad alcuni cookie, consulta l'informativa."
+
+// Stili CSS degli elementi
+var divEsternoCSS = "background-color: rgba(0, 0, 0, 0.7); font-size: 0.8em; font-family: verdana,arial,tahoma,sans-serif; padding: 1em 0px; margin: 0px; width: 100%; position: fixed; left: 0px; top: 0px; z-index: 999999;";
+
+var divInternoCSS = "margin: 0px auto; width: 80%; position: relative;";
+
+var divInfoTextCSS = "color: rgb(255, 255, 255); display: block; float:left; width: 70%; line-height: 1.5em;";
+
+var divButtonsCSS = "color: rgb(255, 255, 255); display:block; float:right; block; width: 25%; text-align: right; line-height: 1.2em;";
+
+var acceptButtonCSS = "color: rgb(255, 153, 0); font-size: 1.1em; font-weight: bold; text-decoration: none; display: block; margin-bottom:1em;";
+
+var infoLinkCSS = "color: rgb(255, 255, 255); text-decoration: underline; display: block;";
 
 // Costruttore del banner informativo
-var infoBanner = "<div id='"+infoBannerId+"' style='"+divEsternoCSS+"'>" +
-                   "<div style='"+divInternoCSS+"'>" +
-                     "<span style='"+infoTextCSS+"'>" +
-                       infoText +
-                     "</span>" +
-                     "<a href='"+cookiePolicyURL+"' target='_blank' style='"+infoLinkCSS+"'>"+infoLinkText+"</a>" +
-                     "<a href='#' id='"+acceptButtonId+"' style='"+acceptButtonCSS+"'>"+acceptButtonText+"</a>"
-                   "</div>" +
-                 "</div>";
+var infoBanner =  "<div id='"+infoBannerId+"' style='"+divEsternoCSS+"'>" +
+                    "<div style='"+divInternoCSS+"'>" +
+                      "<div style='"+divInfoTextCSS+"'>" +
+                        infoText +
+                      "</div>" +
+                      "<div style='"+divButtonsCSS+"'>" +
+                        "<a href='#' id='"+acceptButtonId+"' style='"+acceptButtonCSS+"'>"+acceptButtonText+"</a>" +
+                        "<a href='"+cookiePolicyURL+"' target='_blank' style='"+infoLinkCSS+"'>"+infoLinkText+"</a>" +
+                      "</div>" +
+                    "</div>" +
+                  "</div>";
+
+/*
+
+<div id="cookie_info_breve" style="">
+  <div style="">
+    <div style="">
+      Questo sito utilizza i cookie, anche di terze parti: cliccando su 'Chiudi', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito[....]
+    </div>
+    <div style="">
+      <a href="#" id="cookie_accept_button" style="">Chiudi</a>
+      <a href="http://example.com/cookie-policy" target="_blank" style="">Leggi informativa</a>
+    </div>
+  </div>
+</div>
+
+*/
 
 // Programma principale
 $(document).ready(function() {
+  $('html, body').animate({scrollTop : 0},800);
   // se è presente il cookie "acceptedCookieName" con valore 'true', allora
   if (getCookie(acceptedCookieName) === 'true') { // i cookie sono stati accettati
     optedIn();         // sblocca tutti gli elementi
