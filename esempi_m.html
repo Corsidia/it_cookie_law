@@ -3,26 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Test page for cookie law</title>
+
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="it_cookie_law.js"></script>
+
     <!-- ESEMPIO SCRIPT ESTERNO -->
     <script src="#" data-blocked="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- Stile relativo alla pagina d'esempio -->
-    <style>
-      body {
-        font-family: verdana,arial,tahoma,sans-serif;
-        margin: 1em;
-      }
-      h3 {
-        border-top: 1px solid #ccc;
-        padding-top: 0.5em;
-        margin-top: 1em;
-      }
-    </style>
   </head>
   <body>
+
+    <div id="cookie_info_breve" style="background-color: rgba(0, 0, 0, 0.7); font-size: 0.8em; font-family: verdana,arial,tahoma,sans-serif; padding: 1em 0px; margin: 0px; width: 100%; position: fixed; left: 0px; top: 0px; z-index: 999999;">
+      <div style="margin: 0px auto; width: 80%; position: relative;">
+        <span style="color: rgb(255, 255, 255); display: block; float:left; width: 70%; line-height: 1.5em;">
+          Questo sito utilizza i cookie, anche di terze parti: cliccando su 'Chiudi', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito[....]
+        </span>
+        <span style="color: rgb(255, 255, 255); display:block; float:right; block; width: 25%; text-align: right; line-height: 1.2em;">
+          <a href="#" id="cookie_accept_button" style="color: rgb(255, 153, 0); font-size: 1.1em; font-weight: bold; text-decoration: none; display: block; margin-bottom:1em;">Chiudi</a>
+          <a href="http://example.com/cookie-policy" target="_blank" style="color: rgb(255, 255, 255); text-decoration: underline; display: block;">Leggi informativa</a>
+        </span>
+      </div>
+    </div>
+
     <h1> IT_COOKIE_LAW DEMO</h1>
     <p>A titolo di esempio, seguono alcuni degli elementi di terze parti più diffusi.<br />
       Essi vengono eseguiti solo dopo che hai accettato la cookie policy con le modalità
@@ -62,7 +65,7 @@
       </div>
     </div>
 
-    <h3>Facebook like button</h3>
+    <h2>Facebook like button</h2>
     <!-- Facebook Javascript SDK già caricata qui sopra -->
     <div class="fb-like" data-href="https://github.com/NemboWeb/it_cookie_law#" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
