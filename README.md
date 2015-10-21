@@ -62,7 +62,7 @@ Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
 </script>
 ```
 
-#### Come bloccare gli script esterni e gli iframe
+#### Come bloccare gli script esterni, gli iframe e le immagini di terze parti
 Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`.
 
 E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML sia comunque valido rispetto agli standard del W3C.
@@ -73,6 +73,8 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <script src="https://example.com/path/to/script.js"></script>
 <!-- iframe incorporato al caricamento della pagina -->
 <iframe src="https://example.com/path/to/script.js"></iframe>
+<!-- immagine di terza parte -->
+<img src="https://example.com/path/to/image.jpg"></iframe>
 ```
 
 ##### Dopo:
@@ -81,6 +83,8 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <script src="#" data-blocked="https://example.com/path/to/script.js"></script>
 <!-- iframe bloccato preventivamente -->
 <iframe src="#" data-blocked="https://example.com/path/to/script.js"></iframe>
+<!-- immagine di terza parte bloccata preventivamente -->
+<img src="#" data-blocked="https://example.com/path/to/image.jpg" />
 ```
 
 **Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html), che è lo stesso utilizzato per la [DEMO online](http://www.stagingarea.it/NemboWeb/it_cookie_law-demo/esempi.html).
