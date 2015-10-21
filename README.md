@@ -27,7 +27,7 @@ Devi solo copiare e salvare il file [it_cookie_law.js](it_cookie_law.js) nel tuo
 Dove, ovviamente, `[percorso_al_file]` deve essere sostituito con il path relativo o assoluto alla posizione in cui hai salvato il file.
 Ora puoi procedere al blocco preventivo di tutti gli elementi che fanno uso di cookie che devono essere bloccati (di terze parti e profilanti) con le seguenti modalità.
 
-Se il tuo sito è *responsive* e quindi vuoi che il banner sia ben leggibile sugli schermi di diverse dimensioni (cellulari, tablet, iPad etc.) devi ricordarti di inserire e impostare anche il meta tag `viewport`, sempre nella sezione head della pagina. Ecco un esempio:
+Se il tuo sito è *responsive* e quindi vuoi che il banner sia ben leggibile sugli schermi di diverse dimensioni (cellulari, tablet, iPad etc.) devi ricordarti di inserire e impostare anche il meta tag `viewport`, sempre nella sezione `head` della pagina. Ecco un esempio:
 
 ```html
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
@@ -99,4 +99,4 @@ Prossimamente scriveremo un articolo con la spiegazione dettagliata di questa so
 
 [Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [NemboWeb.com](http://nemboweb.com)
 
-Follow [@NemboWeb_com](https://twitter.com/NemboWeb_com) on Twitter for more.
+PS: Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](http://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/NemboWeb_com)! ;-)
