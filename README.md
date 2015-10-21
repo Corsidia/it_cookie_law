@@ -27,6 +27,12 @@ Devi solo copiare e salvare il file [it_cookie_law.js](it_cookie_law.js) nel tuo
 Dove, ovviamente, `[percorso_al_file]` deve essere sostituito con il path relativo o assoluto alla posizione in cui hai salvato il file.
 Ora puoi procedere al blocco preventivo di tutti gli elementi che fanno uso di cookie che devono essere bloccati (di terze parti e profilanti) con le seguenti modalità.
 
+Se il tuo sito è *responsive* e quindi vuoi che il banner sia ben leggibile sugli schermi di diverse dimensioni (cellulari, tablet, iPad etc.) devi ricordarti di inserire e impostare anche il meta tag `viewport`, sempre nella sezione head della pagina. Ecco un esempio:
+
+```html
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+```
+
 ### Blocco preventivo, come applicarlo
 
 Il modo più sicuro per applicare il blocco preventivo consiste nel modificare l'HTML degli elementi esterni (script e iframe) in modo che non siano eseguibili a meno che non vengano sbloccati dallo script contenuto nel file [it_cookie_law.js](it_cookie_law.js). In questo modo se anche si dovesse verificare un errore a livello javascript la cosa peggiore che potrebbe accadere è che gli elementi esterni non vengano sbloccati, il che consentirebbe comunque di evitare le sanzioni previste dalla legge.
@@ -56,7 +62,7 @@ Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
 </script>
 ```
 
-#### Come bloccare gli script esterni e gli iframe
+#### Come bloccare gli script esterni, gli iframe e le immagini di terze parti
 Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`.
 
 E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML sia comunque valido rispetto agli standard del W3C.
@@ -67,6 +73,8 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <script src="https://example.com/path/to/script.js"></script>
 <!-- iframe incorporato al caricamento della pagina -->
 <iframe src="https://example.com/path/to/script.js"></iframe>
+<!-- immagine di terza parte -->
+<img src="https://example.com/path/to/image.jpg"></iframe>
 ```
 
 ##### Dopo:
@@ -75,6 +83,8 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <script src="#" data-blocked="https://example.com/path/to/script.js"></script>
 <!-- iframe bloccato preventivamente -->
 <iframe src="#" data-blocked="https://example.com/path/to/script.js"></iframe>
+<!-- immagine di terza parte bloccata preventivamente -->
+<img src="#" data-blocked="https://example.com/path/to/image.jpg" />
 ```
 
 **Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html), che è lo stesso utilizzato per la [DEMO online](http://www.stagingarea.it/NemboWeb/it_cookie_law-demo/esempi.html).

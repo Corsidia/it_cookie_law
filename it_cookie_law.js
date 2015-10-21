@@ -132,7 +132,11 @@ function optedIn(){
   });
   // sblocca gli iframes bloccati con 'data-blocked'
   $("iframe[data-blocked]").each(function(){
-    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //cambia il type dello script per renderlo eseguibile
+    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //ripristina l'attributo src
+  });
+  // sblocca le immagini bloccate con 'data-blocked'
+  $("img[data-blocked]").each(function(){
+    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //ripristina l'attributo src
   });
 } // FINE!
 
