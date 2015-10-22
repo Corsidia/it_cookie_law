@@ -91,12 +91,21 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 
 ### Cookie policy
 
-**ATTENZIONE:** La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine dello stesso. Inoltre **devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`** definita all'inizio del file [it_cookie_law.js](it_cookie_law.js).
+**ATTENZIONE:** La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)" o "cookie policy", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine dello stesso.
 
-Prossimamente scriveremo un articolo con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)".
+Inoltre:
+
+* **Devi inserire l'url della tua cookie policy** nel banner informativo **valorizzando la variabile `cookiePolicyURL`**.
+* Devi inserire il *cookie tecnico* utilizzato da questo plugin nell'elenco dei cookie utilizzati dal tuo sito che dev'essere presente nella tua **cookie policy**. Il nome del *cookie tecnico* è definito dalla variabile `acceptedCookieName` mentre la sua durata in giorni è definita dalla variabile `acceptedCookieLife`.
+
+Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_law.js](it_cookie_law.js).
 
 *Buon lavoro!*
 
 [Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [NemboWeb.com](http://nemboweb.com)
 
-PS: Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](http://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/NemboWeb_com)! ;-)
+## P.S.:
+
+Stiamo preparando una serie di lezioni con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)".
+
+Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](http://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/NemboWeb_com)!
