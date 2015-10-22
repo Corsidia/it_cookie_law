@@ -17,6 +17,9 @@ var cookiePolicyURL = "http://example.com/cookie-policy"
 // Nome del cookie impostato. Puoi cambiarlo a tuo piecere.
 var acceptedCookieName = 'cookie_policy_accepted'
 
+// Durata del cookie in giorni
+var acceptedCookieLife = 3000
+
 // Deve essere univoco all'interno della pagina
 var infoBannerId = "cookie_info_breve"
 
@@ -33,15 +36,10 @@ var infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando s
 
 // Stili CSS degli elementi
 var divEsternoCSS = "background-color: rgba(0, 0, 0, 0.7); font-size: 0.8em; font-family: verdana,arial,tahoma,sans-serif; padding: 1em 0px; margin: 0px; width: 100%; position: fixed; left: 0px; top: 0px; z-index: 999999;";
-
 var divInternoCSS = "margin: 0px auto; width: 80%; position: relative;";
-
 var divInfoTextCSS = "color: rgb(255, 255, 255); display: block; float:left; width: 70%; line-height: 1.5em;";
-
 var divButtonsCSS = "color: rgb(255, 255, 255); display:block; float:right; block; width: 25%; text-align: right; line-height: 1.2em;";
-
 var acceptButtonCSS = "color: rgb(255, 153, 0); font-size: 1.1em; font-weight: bold; text-decoration: none; display: block; margin-bottom:1em;";
-
 var infoLinkCSS = "color: rgb(255, 255, 255); text-decoration: underline; display: block;";
 
 // Costruttore del banner informativo
@@ -56,22 +54,6 @@ var infoBanner =  "<div id='"+infoBannerId+"' style='"+divEsternoCSS+"'>" +
                       "</div>" +
                     "</div>" +
                   "</div>";
-
-/*
-
-<div id="cookie_info_breve" style="">
-  <div style="">
-    <div style="">
-      Questo sito utilizza i cookie, anche di terze parti: cliccando su 'Chiudi', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito[....]
-    </div>
-    <div style="">
-      <a href="#" id="cookie_accept_button" style="">Chiudi</a>
-      <a href="http://example.com/cookie-policy" target="_blank" style="">Leggi informativa</a>
-    </div>
-  </div>
-</div>
-
-*/
 
 // Programma principale
 $(document).ready(function() {
@@ -106,7 +88,7 @@ function readUserInput(){
 }
 // Salvataggio del consenso con cookie tecnico 'acceptedCookieName'
 function cookieOptIn(){
-  setCookie(acceptedCookieName, 'true', 3000);
+  setCookie(acceptedCookieName, 'true', acceptedCookieLife); //salvataggio del cookie sul browser dell'utente
   $('#'+infoBannerId).hide();
   optedIn();
 }
