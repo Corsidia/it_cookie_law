@@ -1,4 +1,4 @@
-# Implementazione della "EU Cookie Law" così come recepita dall'Italia
+# Implementazione della "EU Cookie Law" così come recepita dall'Italia, con un semplice script
 
 Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve e ben commentato, consente di adempiere facilmente alla normativa sui cookie italiana. In particolare consente di implementare:
 
@@ -9,15 +9,15 @@ Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve
 
 Una [**DEMO** è disponbile online a questo indirizzo](http://www.stagingarea.it/NemboWeb/it_cookie_law-demo/esempi.html).
 
-Il codice è fa uso della libreria `jQuery v.1.11` ed è retro-compatibile fino a IE6. Inoltre è stato testato coi principali principali smartphone. Se dovessi trovare un problema di compatibilità è **più che benaccetta la sua segnalazione!** Se fossi obbligato a utilizzare `jQuery 2` il plugin potrebbe funzionare lo stesso ma la retro-compatibilità ne risentirebbe (jQuery v.2 supporta i browser a partire da IE9).
+Lo **script** fa uso della libreria `jQuery v.1.11` ed è retro-compatibile fino a IE6. Inoltre è stato testato coi principali principali smartphone. Se dovessi trovare un problema di compatibilità è **più che benaccetta la sua segnalazione!** Se fossi obbligato a utilizzare `jQuery 2` il plugin potrebbe funzionare lo stesso ma la retro-compatibilità ne risentirebbe (jQuery v.2 supporta i browser a partire da IE9).
 Inoltre, trattandosi di un progetto open-source, sei benvenuto a contribuire.
 
 Infine il plugin è **liberamente utilizzabile** anche per scopi commerciali.
 
-Maggiori informazioni sulla cookie law e sulle modalità di adempimento [sono disponibili qui](http://nemboweb.com/blog/didattica/cookie-law-vademecum).
+Maggiori informazioni sulla cookie law e sulle modalità di adempimento [sono disponibili qui](http://nemboweb.com/blog/didattica/cookie-law-tutorial).
 
 ## Installazione
-Devi solo copiare e salvare il file [it_cookie_law.js](it_cookie_law.js) nel tuo progetto e quindi richiamarlo nella sezione `head` di tutte le tue pagine HTML subito dopo aver richiamato anche jQuery, così:
+Devi solo copiare e salvare lo script [it_cookie_law.js](it_cookie_law.js) nel tuo progetto e quindi richiamarlo nella sezione `head` di tutte le tue pagine HTML subito dopo aver richiamato anche jQuery, così:
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
