@@ -104,21 +104,17 @@ function reloadJs(src) {
 // accettato esplicitamente i cookie (ha cioè fatto "opt-in")
 function optedIn(){
   // sblocca gli script esterni bloccati con 'data-blocked'
-  $("script[data-blocked]").each(function(){
+  $("head script[data-blocked]").each(function(){
     reloadJs($(this).attr('data-blocked'));
+  });
+  // sblocca iframes, immagini e altri elementi bloccati con 'data-blocked'
+  $("body [data-blocked]").each(function(){
+    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //ripristina l'attributo src
   });
   // sblocca gli script in embed bloccati con 'type=text/blocked'
   $("body script[type='text/blocked']").each(function(){
     $(this).attr('type', 'text/javascript'); //cambia il type dello script per renderlo eseguibile
     $.globalEval($(this).html()); //esegui lo script
-  });
-  // sblocca gli iframes bloccati con 'data-blocked'
-  $("iframe[data-blocked]").each(function(){
-    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //ripristina l'attributo src
-  });
-  // sblocca le immagini bloccate con 'data-blocked'
-  $("img[data-blocked]").each(function(){
-    $(this).attr('src', $(this).attr('data-blocked')).removeAttr('data-blocked') //ripristina l'attributo src
   });
 } // FINE!
 
