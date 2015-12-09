@@ -57,7 +57,6 @@ var infoBanner =  "<div id='"+infoBannerId+"' style='"+divEsternoCSS+"'>" +
 
 // Programma principale
 $(document).ready(function() {
-  $('html, body').animate({scrollTop : 0},800);
   // se è presente il cookie "acceptedCookieName" con valore 'true', allora
   if (getCookie(acceptedCookieName) === 'true') { // i cookie sono stati accettati
     optedIn();         // sblocca tutti gli elementi

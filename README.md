@@ -37,6 +37,8 @@ Se il tuo sito è *responsive* e quindi vuoi che il banner sia ben leggibile sug
 
 Il modo più sicuro per applicare il blocco preventivo consiste nel modificare l'HTML degli elementi esterni (script e iframe) in modo che non siano eseguibili a meno che non vengano sbloccati dallo script contenuto nel file [it_cookie_law.js](it_cookie_law.js). In questo modo se anche si dovesse verificare un errore a livello javascript la cosa peggiore che potrebbe accadere è che gli elementi esterni non vengano sbloccati, il che consentirebbe comunque di evitare le sanzioni previste dalla legge.
 
+**ATTENZIONE:** questo script funziona modificando temporaneamente il codice degli elementi di terze parti, pertanto potrebbe non essere adatto all'uso con sistemi per l'advertising come **Google Adsense** e **DoubleClick** che penalizzano la modifica dei propri elementi.
+
 #### Come bloccare gli script in embed
 Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`. Se non fosse presente l'attributo `type=text/javascript` nello script che vuoi bloccare è perché si tratta del valore di default e quindi talvolta viene omesso. Per bloccare lo script inserici comunque l'attributo `type=text/blocked`. Seguono due esempi.
 
@@ -74,7 +76,7 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <!-- iframe incorporato al caricamento della pagina -->
 <iframe src="https://example.com/path/to/script.js"></iframe>
 <!-- immagine di terza parte -->
-<img src="https://example.com/path/to/image.jpg"></iframe>
+<img src="https://example.com/path/to/image.jpg" />
 ```
 
 ##### Dopo:
