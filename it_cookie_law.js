@@ -11,7 +11,7 @@
 * LE PRIME VARIABILI SONO DA IMPOSTARE SECONDO LE TUE ESIGENZE!
 */
 
-// QUESTO INDIRIZZO DEVE RIMANDARE AD UNA PAGINA ESISTENTE CONTENENTE LA TUA Cookie policy!
+// QUESTO URL DEVE ESSERE QUELLO DELLA TUA Cookie policy (Informativa Estesa) sul TUO sito!
 var cookiePolicyURL = "http://example.com/cookie-policy"
 
 // Nome del cookie impostato. Puoi cambiarlo a tuo piecere.
