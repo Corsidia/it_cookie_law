@@ -104,10 +104,10 @@ Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_la
 
 *Buon lavoro!*
 
-[Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [NemboWeb.com](http://nemboweb.com)
+[Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [Corsidia.com](http://corsidia.com)
 
 ## P.S.:
 
-Stiamo preparando una serie di lezioni con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)" e del corso con docente "[WebMaster Base a Milano](http://nemboweb.com/corsi/corso-webmaster-base/a-milano)".
+Stiamo preparando una serie di lezioni con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)".
 
-Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](http://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/NemboWeb_com)!
+Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](http://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/Corsidia)!
