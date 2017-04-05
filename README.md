@@ -104,7 +104,7 @@ Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_la
 
 *Buon lavoro!*
 
-[Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [Corsidia.com](http://corsidia.com)
+[Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [Corsidia.com](https://corsidia.com)
 
 ## P.S.:
 
