@@ -93,7 +93,7 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 
 ### Cookie policy
 
-**ATTENZIONE:** La normativa impone di scrivere anche una "[informativa estesa](http://nemboweb.com/blog/didattica/cookie-law-vademecum#passo2)" o "cookie policy", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine dello stesso.
+**ATTENZIONE:** La normativa impone di scrivere anche una "[informativa estesa](https://corsidia.com/materia/web-design/webmaster-tutorial/privacy-e-cookie-law#quadro-normativo)" o "cookie policy", ricordati che devi includerla nel tuo sito e linkarla in fondo a tutte le pagine dello stesso.
 
 Inoltre:
 
@@ -104,7 +104,7 @@ Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_la
 
 *Buon lavoro!*
 
-[Duccio Armenise](http://nemboweb.com/team/duccio-armenise) e [Marta Petrella](http://nemboweb.com/team/marta-petrella), [Corsidia.com](https://corsidia.com)
+[Duccio Armenise](https://corsidia.com/team/duccio-armenise), [Alberto Olla](https://www.albertoolla.it/) e [Marta Petrella](http://www.martapetrella.com/).
 
 ## P.S.:
 
