@@ -14,7 +14,7 @@ Inoltre, trattandosi di un progetto open-source, sei benvenuto a contribuire.
 
 Infine il plugin è **liberamente utilizzabile** anche per scopi commerciali.
 
-Maggiori informazioni sulla cookie law e sulle modalità di adempimento [sono disponibili qui](http://nemboweb.com/blog/didattica/cookie-law-tutorial).
+Maggiori informazioni sulla cookie law e sulle modalità di adempimento [sono disponibili qui](https://corsidia.com/materia/web-design/webmaster-tutorial/privacy-e-cookie-law#quadro-normativo).
 
 ## Installazione
 Devi solo copiare e salvare lo script [it_cookie_law.js](it_cookie_law.js) nel tuo progetto e quindi richiamarlo nella sezione `head` di tutte le tue pagine HTML subito dopo aver richiamato anche jQuery, così:
