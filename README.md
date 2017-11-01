@@ -9,7 +9,7 @@ Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve
 
 Una [**DEMO** è disponbile online a questo indirizzo](http://corsidia.github.io/it_cookie_law/esempi.html).
 
-Lo **script** fa uso della libreria `jQuery v.1.11` ed è retro-compatibile fino a IE6. Inoltre è stato testato coi principali principali smartphone. Se dovessi trovare un problema di compatibilità è **più che benaccetta la sua segnalazione!** Se fossi obbligato a utilizzare `jQuery 2` il plugin potrebbe funzionare lo stesso ma la retro-compatibilità ne risentirebbe (jQuery v.2 supporta i browser a partire da IE9).
+Lo **script** fa uso della libreria `jQuery v.1.11` ed è retro-compatibile fino a IE6. Inoltre è stato testato coi principali smartphone. Se dovessi trovare un problema di compatibilità è **più che benaccetta la sua segnalazione!** Se fossi obbligato a utilizzare `jQuery 2` il plugin potrebbe funzionare lo stesso ma la retro-compatibilità ne risentirebbe (jQuery v.2 supporta i browser a partire da IE9).
 Inoltre, trattandosi di un progetto open-source, sei benvenuto a contribuire.
 
 Infine il plugin è **liberamente utilizzabile** anche per scopi commerciali.
