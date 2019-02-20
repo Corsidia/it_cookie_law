@@ -1,16 +1,17 @@
 # Implementazione della "EU Cookie Law" così come recepita dall'Italia, con un semplice script
 
-Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve e ben commentato, consente di adempiere facilmente alla normativa sui cookie italiana. In particolare consente di implementare:
+Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve e ben commentato, fornisce una base di partenza per adempiere alla normativa sui cookie italiana. In particolare consente di implementare facilmente:
 
 * Il **blocco preventivo** di tutti gli elementi interni ed esterni che fanno uso di cookie;
 * La **presentazione del banner** (l'informativa breve) ai soli utenti che non hanno ancora accettato la cookie policy;
-* La **registrazione del consenso** dell'utente espresso con la *continuazione della navigazione mediante scroll della pagina* o click sul pulsante di accettazione del banner;
+* La **registrazione del consenso** dell'utente espresso con la *continuazione della navigazione mediante scroll della pagina* o click sul pulsante di accettazione del banner; (L'accettazione tramite scroll può anche essere disabilitata).
 * Lo **sblocco di tutti gli elementi** preventivamente bloccati per i soli utenti che hanno espresso il consenso con le modalità descritte nel banner.
 
 Una [**DEMO** è disponbile online a questo indirizzo](http://corsidia.github.io/it_cookie_law/esempi.html).
 
 Lo **script** fa uso della libreria `jQuery v.1.11` ed è retro-compatibile fino a IE6. Inoltre è stato testato coi principali smartphone. Se dovessi trovare un problema di compatibilità è **più che benaccetta la sua segnalazione!** Se fossi obbligato a utilizzare `jQuery 2` il plugin potrebbe funzionare lo stesso ma la retro-compatibilità ne risentirebbe (jQuery v.2 supporta i browser a partire da IE9).
-Inoltre, trattandosi di un progetto open-source, sei benvenuto a contribuire.
+
+Inoltre, trattandosi di un progetto open-source, ogni contributo è il benvenuto!
 
 Infine il plugin è **liberamente utilizzabile** anche per scopi commerciali.
 
