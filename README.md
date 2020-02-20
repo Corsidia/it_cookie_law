@@ -90,6 +90,24 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 <img src="#" data-blocked="https://example.com/path/to/image.jpg" />
 ```
 
+#### Abilitare l'aggiornamento della pagina dopo che l'utente ha dato il consenso
+
+Di default questa funzionalità è disabilitata.
+
+All'inizio del file `it_cookie_law.js` tra le variabili di configurazioni della libreria troverai:
+
+##### Prima:
+```javascript
+var refreshAfterOptIn = false;
+```
+
+Se vuoi abilitare questa funzionalità ti basta impostare questa variabile a `true`:
+
+##### Dopo:
+```javascript
+var refreshAfterOptIn = true;
+```
+
 **Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html), che è lo stesso utilizzato per la [DEMO online](http://corsidia.github.io/it_cookie_law/esempi.html).
 
 ### Cookie policy

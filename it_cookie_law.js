@@ -1,4 +1,4 @@
-/* IT_COOKIE_LAW.js v.1.0.0b
+/* IT_COOKIE_LAW.js v.1.0.1b
 * Plugin che permette di adempiere alla normativa europea sui Cookie così come
 * receptia dallo Stato Italiano.
 * Per funzionare necessita di jQuery v.1
@@ -12,27 +12,29 @@
 */
 
 // QUESTO URL DEVE ESSERE QUELLO DELLA TUA Cookie policy (Informativa Estesa) sul TUO sito!
-var cookiePolicyURL = "http://example.com/cookie-policy"
+var cookiePolicyURL = "http://example.com/cookie-policy";
 
 // Nome del cookie impostato. Puoi cambiarlo a tuo piecere.
-var acceptedCookieName = 'cookie_policy_accepted'
+var acceptedCookieName = 'cookie_policy_accepted';
 
 // Durata del cookie in giorni
-var acceptedCookieLife = 3000
+var acceptedCookieLife = 3000;
 
 // Deve essere univoco all'interno della pagina
-var infoBannerId = "cookie_info_breve"
+var infoBannerId = "cookie_info_breve";
 
 // Deve essere univoco all'interno della pagina
-var acceptButtonId = "cookie_accept_button"
+var acceptButtonId = "cookie_accept_button";
 
+// Se impostata a true aggiorna la pagina dopo che l'utente ha dato il consenso
+var refreshAfterOptIn = false;
 
 // testi dei pulsanti
-var acceptButtonText = "Chiudi"
-var infoLinkText = "Leggi informativa"
+var acceptButtonText = "Chiudi";
+var infoLinkText = "Leggi informativa";
 
 // Testo dell'informativa
-var infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando su '"+acceptButtonText+"', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito, acconsenti all'utilizzo dei cookie. Per maggiori informazioni o per negare il consenso a tutti o ad alcuni cookie, consulta l'informativa."
+var infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando su '"+acceptButtonText+"', proseguendo nella navigazione, effettuando lo scroll della pagina o altro tipo di interazione col sito, acconsenti all'utilizzo dei cookie. Per maggiori informazioni o per negare il consenso a tutti o ad alcuni cookie, consulta l'informativa.";
 
 // Stili CSS degli elementi
 var divEsternoCSS = "background-color: rgba(0, 0, 0, 0.7); font-size: 0.8em; font-family: verdana,arial,tahoma,sans-serif; padding: 1em 0px; margin: 0px; width: 100%; position: fixed; left: 0px; top: 0px; z-index: 999999;";
@@ -78,7 +80,7 @@ function readUserInput(){
       accepted = true;
       cookieOptIn();
     }
-  }
+  };
   // Accettazione con click su acceptButton
   $('#'+acceptButtonId).click(function() {
     accepted = true;
@@ -89,7 +91,11 @@ function readUserInput(){
 function cookieOptIn(){
   setCookie(acceptedCookieName, 'true', acceptedCookieLife); //salvataggio del cookie sul browser dell'utente
   $('#'+infoBannerId).hide();
-  optedIn();
+  if (refreshAfterOptIn) {
+      window.location.reload();
+  } else {
+      optedIn();
+  }
 }
 
 // Sblocca gli script esterni ricaricandoli in fondo alla pagina HTML
@@ -124,11 +130,10 @@ function optedIn(){
 function getCookies(){
   var cookies = {};
   var all = document.cookie; // Get all cookies in one big string
-  if (all === "")
-    return cookies;
-  var list = all.split("; ")
+  if (all === "") { return cookies; }
+  var list = all.split("; ");
   for (var i=0; i<list.length; i++) {
-    var cookie = list[i]
+    var cookie = list[i];
     var p = cookie.indexOf("=");
     var name = cookie.substring(0,p);
     var value = cookie.substring(p+1);
