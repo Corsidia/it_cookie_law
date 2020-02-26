@@ -51,9 +51,9 @@ var buttonHandlerDivId = 'button_handler_div_id';
 var buttonHandlerId = 'button_handler_id';
 var buttonHandlerHtml = '<div  style="'+divEsternoCSSButtonHandler+'" id="' + buttonHandlerDivId + '"><button style="' + buttonHandlerCss + '" id="' + buttonHandlerId + '">Privacy & Cookie Policy</button></div>';
 
-var explicitConset = false;
+var explicitConsent = false;
 var denyButtonText = "Nega";
-if (explicitConset) {
+if (explicitConsent) {
   acceptButtonText = "Accetta";
   infoText = "Questo sito utilizza i cookie, anche di terze parti: cliccando su '"+acceptButtonText+"' acconsenti all'utilizzo dei cookie. Per negare il consenso sull'utilizzo dei cookie di terze parti clicca su '" + denyButtonText + "'. Per maggiori informazioni consulta l'informativa.";
 }
@@ -67,7 +67,7 @@ var infoBanner =  "<div id='"+infoBannerId+"' style='"+divEsternoCSS+"'>" +
                       "<div style='"+divButtonsCSS+"'>" +
                         "<a href='#' id='"+acceptButtonId+"' style='"+acceptButtonCSS+"'>"+acceptButtonText+"</a>";
 
-if (explicitConset) {
+if (explicitConsent) {
   infoBanner +=         "<a href='#' id='"+denyButtonId+"' style='"+acceptButtonCSS+"'>"+denyButtonText+"</a>";
 }
 
@@ -107,7 +107,7 @@ function readUserInput(){
   // Accettazione mediante scroll
   var accepted = false; // questa variabile serve a rilevare l'accettamento solo una volta
 
-  if (!explicitConset) {
+  if (!explicitConsent) {
     window.onscroll = function (e) {
       if (!accepted) {
         accepted = true;

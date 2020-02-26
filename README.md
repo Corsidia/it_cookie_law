@@ -118,12 +118,12 @@ Se vuoi disabilitare questa funzionalità e far si che l'utente accetti esplicit
 
 ##### Prima:
 ```javascript
-var explicitConset = false;
+var explicitConsent = false;
 ```
 
 ##### Dopo:
 ```javascript
-var explicitConset = true;
+var explicitConsent = true;
 ```
 
 **Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html), che è lo stesso utilizzato per la [DEMO online](http://corsidia.github.io/it_cookie_law/esempi.html).
