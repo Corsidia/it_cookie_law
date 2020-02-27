@@ -108,6 +108,24 @@ Se vuoi abilitare questa funzionalità ti basta impostare questa variabile a `tr
 var refreshAfterOptIn = true;
 ```
 
+
+#### Abilitare il consenso esplicito dell'utente
+
+Di default la libreria memorizza il consenso dell'utente anche in maniera implicita, se prosegue la navigazione sul 
+sito accetta implicitamente i cookies.
+Se vuoi disabilitare questa funzionalità e far si che l'utente accetti esplicitamente i cookies cliccando sul bottone
+'Accetta' ed abbia anche la possibiltà di negare l'utilizzo dei cookies devi impostare la seguente variabile:
+
+##### Prima:
+```javascript
+var explicitConsent = false;
+```
+
+##### Dopo:
+```javascript
+var explicitConsent = true;
+```
+
 **Altri esempi** per gli elementi incorporati di **Facebook**, **Google** e **DISQUS** sono disponibili nel file [esempi.html](esempi.html), che è lo stesso utilizzato per la [DEMO online](http://corsidia.github.io/it_cookie_law/esempi.html).
 
 ### Cookie policy
@@ -123,7 +141,7 @@ Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_la
 
 *Buon lavoro!*
 
-[Duccio Armenise](https://corsidia.com/team/duccio-armenise), [Alberto Olla](https://www.albertoolla.it/) e [Marta Petrella](http://www.martapetrella.com/).
+[Duccio Armenise](https://corsidia.com/team/duccio-armenise), [Alberto Olla](https://www.albertoolla.it/), [Marta Petrella](http://www.martapetrella.com/) e [Antonio Porcelli](https://progressify.dev).
 
 ## P.S.:
 
