@@ -5,7 +5,7 @@
 * Autori: Duccio Armenise e Marta Petrella (http://NemboWeb.com), Antonio Porcelli (https://progressify.dev)
 * Maggiori info:
 ** https://github.com/NemboWeb/it_cookie_law (repository online)
-** http://nemboweb.com/blog/didattica/cookie-law-vademecum (cookie law vademecum)
+** https://corsidia.com/materia/cookie-law/cookie-law-tutorial (cookie law vademecum)
 * Il codice è molto semplice, breve e ben commentato,
 * ti raccomandiamo vivamente di leggerlo e comprenderne il funzionamento.
 * LE PRIME VARIABILI SONO DA IMPOSTARE SECONDO LE TUE ESIGENZE!
