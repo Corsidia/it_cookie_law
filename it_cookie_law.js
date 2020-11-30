@@ -1,6 +1,6 @@
 /* IT_COOKIE_LAW.js v.1.1b
 * Plugin che permette di adempiere alla normativa europea sui Cookie così come
-* receptia dallo Stato Italiano.
+* recepita dallo Stato Italiano.
 * Per funzionare necessita di jQuery v.1
 * Autori: Duccio Armenise e Marta Petrella (http://NemboWeb.com), Antonio Porcelli (https://progressify.dev)
 * Maggiori info:
