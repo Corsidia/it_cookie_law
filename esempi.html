@@ -1,102 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Test page for cookie law</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<head>
+  <meta charset="utf-8">
+  <title>Test page for cookie law</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="it_cookie_law.js"></script>
-    <!-- ESEMPIO SCRIPT ESTERNO -->
-    <script src="#" data-blocked="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- Stile relativo alla pagina d'esempio -->
-    <style>
-      body {
-        font-family: verdana,arial,tahoma,sans-serif;
-        margin: 1em;
-      }
-      h3 {
-        border-top: 1px solid #ddd;
-        padding-top: 0.5em;
-        margin-top: 1em;
-      }
-    </style>
-  </head>
-  <body>
-    <h1> IT_COOKIE_LAW DEMO</h1>
-    <p>A titolo di esempio, seguono alcuni degli elementi di terze parti più diffusi.<br />
-      Essi vengono eseguiti solo dopo che hai accettato la cookie policy con le modalità
-      espresse dal banner informativo. In particolare è possibile accettare le condizioni anche <b>con un semplice
-      scroll della pagina</b>, ma solo dopo un paio di secondi dalla comparsa del banner.<br/>
-      Il consenso viene registrato mediante un cookie tecnico nominato "cookie_policy_accepted" di default.
-      Puoi eliminarlo dal browser e ricaricare questa pagina per verificare che gli elementi vengano nuovamente bloccati
-      e che ricompaia il banner informativo.<br />
-      Per i dettagli e le modalità per segnalare eventuali problemi o suggerimenti puoi fare riferimento alla <a href="https://github.com/NemboWeb/it_cookie_law">documentazione ufficiale del plugin su Github</a>.<br />
-    </p>
-    <p>
-      Buona implementazione!<br />
-      <strong>NemboWeb.com</strong>
-    </p>
-    <h2>Elementi incorporati di terze parti che fanno uso di cookie</h2>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="it_cookie_law.js"></script>
+  <!-- ESEMPIO SCRIPT ESTERNO -->
+  <!-- Stile relativo alla pagina d'esempio -->
+  <style>
+  body {
+    font-family: verdana,arial,tahoma,sans-serif;
+    margin: 1em;
+  }
+  h3 {
+    border-top: 1px solid #ddd;
+    padding-top: 0.5em;
+    margin-top: 1em;
+  }
+  </style>
+</head>
+<body>
+  <h1> IT_COOKIE_LAW DEMO</h1>
+  <p>
+    A titolo di esempio, seguono alcuni degli elementi di terze parti più diffusi.<br />
+    Essi vengono eseguiti solo dopo che hai accettato la cookie policy con le modalità
+    espresse dal banner informativo. In particolare è possibile accettare le condizioni anche <b>con un semplice scroll della pagina</b>, ma solo dopo un paio di secondi dalla comparsa del banner.<br/>
+    Il consenso viene registrato mediante un cookie tecnico nominato "cookie_policy_accepted" di default.
+    Puoi eliminarlo dal browser e ricaricare questa pagina per verificare che gli elementi vengano nuovamente bloccati
+    e che ricompaia il banner informativo.<br />
+    Per i dettagli e le modalità per segnalare eventuali problemi o suggerimenti puoi fare riferimento alla <a href="https://github.com/Corsidia/it_cookie_law">documentazione ufficiale del plugin su Github</a>.<br />
+  </p>
+  <p>
+    Buona implementazione!<br />
+    <em>Corsidia Team</em>
+  </p>
+  <h2>Elementi incorporati di terze parti che fanno uso di cookie</h2>
 
-    <h3>Twitter Follow Button</h3>
-    <a href="https://twitter.com/NemboWeb_com" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @NemboWeb_com</a>
-    <script type="text/blocked">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <h3>Script incorporato (embedded)</h3>
+  <script type='text/blocked'>
+    alert('Io ero bloccato preventivamente, se mi leggi vuol dire che mi hai appena sbloccato!');
+  </script>
 
-    <h3>Facebook page plugin</h3>
-    <!-- per il test fare prima login su Facebook (se non si è effettuato il login i cookie non vengono settati)-->
-    <div id="fb-root"></div>
-    <!--  ESEMPIO SCRIPT IN EMBED -->
-    <script type="text/blocked">(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=259326770895841";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-page" data-href="https://www.facebook.com/nemboweb" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
-      <div class="fb-xfbml-parse-ignore">
-        <blockquote cite="https://www.facebook.com/nemboweb">
-          <a href="https://www.facebook.com/nemboweb">NemboWeb</a>
-        </blockquote>
-      </div>
-    </div>
+  <h3>Twitter Follow Button</h3>
+  <a href="https://twitter.com/corsidia" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Corsidia</a>
+  <script type="text/blocked">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-    <h3>Facebook like button</h3>
-    <!-- Facebook Javascript SDK già caricata qui sopra -->
-    <div class="fb-like" data-href="https://github.com/NemboWeb/it_cookie_law#" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+  <h3>Google Map iframe</h3>
+  <!-- ESEMPIO IFRAME -->
+  <iframe data-blocked="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22343.154597946985!2d9.300697549999999!3d45.57256365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1444996431033" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-    <h3>Google Map iframe</h3>
-    <!-- ESEMPIO IFRAME -->
-    <iframe data-blocked="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22343.154597946985!2d9.300697549999999!3d45.57256365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1444996431033" width="450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-    <h3>Google +1 Button</h3>
-    <g:plusone></g:plusone>
-
-    <h3>Google Follow Button</h3>
-    <div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/u/0/111181744147224037329" data-rel="publisher"></div>
-
-    <h3>Google Hangout button</h3>
-    <div class="g-hangout" data-render="createhangout"></div>
-
-    <h3>Youtube Embed</h3>
-    <!-- ESEMPIO IFRAME -->
-    <iframe src="#" width="450" height="300" data-blocked="https://www.youtube.com/embed/-1CbbY0k7yI" frameborder="0" allowfullscreen></iframe>
-
-    <h3>DISQUS</h3>
-    <!-- ESEMPIO SCRIPT IN EMBED -->
-    <div id="disqus_thread"></div>
-    <script type="text/blocked">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'itacookielawtest';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  </body>
+  <h3>Youtube Embed</h3>
+  <!-- ESEMPIO IFRAME -->
+  <iframe src="#" width="450" height="300" data-blocked="https://www.youtube.com/embed/-1CbbY0k7yI" frameborder="0" allowfullscreen></iframe>
+</body>
 </html>
