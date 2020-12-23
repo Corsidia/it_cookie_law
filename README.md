@@ -159,6 +159,6 @@ Tutte le variabili appena citate sono definite all'inizio del file [it_cookie_la
 
 ## P.S.:
 
-Stiamo preparando una serie di lezioni con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](http://nemboweb.com/corsi/webmaster-tutorial)".
+Stiamo preparando una serie di lezioni con la spiegazione dettagliata di questa soluzione nell'ambito del nostro corso online gratuito "[WebMaster Tutorial](https://corsidia.com/materia/web-design/webmaster-tutorial)".
 
-Per ricevere aggiornamenti su questo plugin puoi [iscriverti alla nostra mailing list](https://nemboweb.com/blog/didattica/cookie-law-vademecum#end) o [seguirci su Twitter](https://twitter.com/Corsidia)!
+Per aggiornamenti [seguici su Twitter](https://twitter.com/Corsidia)!
