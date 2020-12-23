@@ -68,7 +68,21 @@ Rinomina il valore dell'attributo `type=text/javascript` in `type=text/blocked`.
 #### Come bloccare gli script esterni, gli iframe e le immagini di terze parti
 Rinomina l'attributo `src=[URL]` in `data-blocked=[URL]`.
 
-E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML sia comunque valido rispetto agli standard del W3C.
+E' consigliato includere comunque l'attributo `src="blocked.html"` affinché il file HTML sia comunque valido rispetto agli standard del W3C. Il file blocked.html può essere una pagina html con un semplice messaggio temporaneo, come questo:
+
+```
+<!-- blocked.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cookie bloccati</title>
+  </head>
+  <body>
+     Per vedere questo contenuto devi accettare i cookie.
+  </body>
+</html>
+```
 
 ##### Prima:
 ```html
@@ -83,11 +97,11 @@ E' consigliato includere comunque l'attributo `src='#'` affinché il file HTML s
 ##### Dopo:
 ```html
 <!-- script nella sezione head bloccato preventivamente -->
-<script src="#" data-blocked="https://example.com/path/to/script.js"></script>
+<script src="blocked.html" data-blocked="https://example.com/path/to/script.js"></script>
 <!-- iframe bloccato preventivamente -->
-<iframe src="#" data-blocked="https://example.com/path/to/script.js"></iframe>
+<iframe src="blocked.html" data-blocked="https://example.com/path/to/script.js"></iframe>
 <!-- immagine di terza parte bloccata preventivamente -->
-<img src="#" data-blocked="https://example.com/path/to/image.jpg" />
+<img src="blocked.html" data-blocked="https://example.com/path/to/image.jpg" />
 ```
 
 #### Abilitare l'aggiornamento della pagina dopo che l'utente ha dato il consenso
