@@ -1,4 +1,6 @@
-# Implementazione della "EU Cookie Law" così come recepita dall'Italia, con un semplice script
+# DEPRECATO, NON UTILIZZARE: gli ultimi aggiornamenti della normativa hanno reso questa soluzione inadeguata, sconsigliamo di utilizzarla.
+
+## Implementazione della "EU Cookie Law" così come recepita dall'Italia, con un semplice script
 
 Questo plugin, **composto da [un solo file javascript](it_cookie_law.js)** breve e ben commentato, fornisce una base di partenza per adempiere alla normativa sui cookie italiana. In particolare consente di implementare facilmente:
 
